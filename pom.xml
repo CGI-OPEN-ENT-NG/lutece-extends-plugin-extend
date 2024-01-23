@@ -50,6 +50,18 @@
         <developerConnection>scm:git:https://github.com/lutece-platform/lutece-extends-plugin-extend.git</developerConnection>
         <url>https://github.com/lutece-platform/lutece-extends-plugin-extend.git</url>
       <tag>plugin-extend-1.3.7</tag>
-  </scm>
+    </scm>
+    <distributionManagement>
+        <repository>
+            <id>nexusEnt</id>
+            <name>CGI Maven Releases</name>
+            <url>https://nexus-pic2.support-ent.fr/repository/cgi-maven-releases</url>
+        </repository>
+        <snapshotRepository>
+            <id>nexusSnapshots</id>
+            <name>CGI Maven Snapshots</name>
+            <url>https://nexus-pic2.support-ent.fr/repository/cgi-maven-snapshots</url>
+        </snapshotRepository>
+    </distributionManagement>
     
 </project>

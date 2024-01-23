@@ -14,13 +14,15 @@
 				<#elseif hasBoxTools>
 					<@tform type='inline' action='jsp/admin/plugins/extend/ManageResourceExtendersByResource.jsp'>
 						<@input type='hidden' name='manageByResource' value='${manageByResource?c}' />
-						<@btnGroup>
-							<#list resourceExtenderActions?reverse as resourceExtenderAction>
-								<#if resourceExtenderAction.buttonTemplate?has_content>
-									<#include resourceExtenderAction.buttonTemplate />
-								</#if>
-							</#list>
-						</@btnGroup>
+						<#if resourceExtenderActions??>
+							<@btnGroup>
+								<#list resourceExtenderActions?reverse as resourceExtenderAction>
+									<#if resourceExtenderAction.buttonTemplate?has_content>
+										<#include resourceExtenderAction.buttonTemplate />
+									</#if>
+								</#list>
+							</@btnGroup>
+						</#if>
 					</@tform>
 				</#if>
 			</@boxHeader>	
